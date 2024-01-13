@@ -26,7 +26,7 @@ class Snake {
             }
         });
 
-        // temporary.
+        // initially temporary but kept as an easter egg.
         document.addEventListener('keyup', function(e) {
             if (e.key === 'r') {
                 _this.grow();
