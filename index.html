@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snakle!</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div id="sidebar">
+                <h2 id="title">SNAKLE</h2>
+
+                <div class="guess-list">
+                    <div class="guess-row">
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                    </div>
+                    <div class="guess-row">
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                    </div>
+                    <div class="guess-row">
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                    </div>
+                    <div class="guess-row">
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                    </div>
+                    <div class="guess-row">
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                    </div>
+                    <div class="guess-row">
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                        <div class="guess-column"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="main">
+                <div class="overlay visible">
+                    <div class="overlay-inner overlay-start visible">
+                        <h2>Press &lt;Backspace&gt; to remove a letter</h2>
+                        <h2>Press &lt;Enter&gt; to play the word</h2>
+                        <h2>Ready? Press &lt;Enter&gt; to start</h2>
+                    </div>
+
+                    <div class="overlay-inner overlay-fail">
+                        <h2>You died!</h2>
+                        <h2 class="overlay-fail-word">The word was ....</h2>
+                        <h2>Press &lt;Enter&gt; to play again</h2>
+                    </div>
+
+                    <div class="overlay-inner overlay-win">
+                        <h2>You won!</h2>
+                        <h2>Good job!</h2>
+                        <h2>Press &lt;Enter&gt; to play again</h2>
+                    </div>
+                </div>
+
+                <canvas id="game" tabindex="1"></canvas>
+            </div>
+        </div>
+
+        <script src="words.js"></script>
+        <script src="globals.js"></script>
+        <script src="letter.js"></script>
+        <script src="snake.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
