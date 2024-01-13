@@ -105,13 +105,19 @@ document.addEventListener('keyup', function(e) {
                 guessRows[thisGuess].querySelectorAll('.guess-column').forEach((column, index) => {
                     if (!column.classList.contains('yellow') && !column.classList.contains('green')) {
                         column.classList.add('wrong');
+
+                        letters.forEach((letter) => {
+                            if (letter.letter === column.innerHTML) {
+                                letter.kill();
+                            }
+                        })
                     }
                 });
 
                 thisGuess++;
                 thisColumn = 0;
 
-                if (thisGuess >= 6) {
+                if (thisGuess >= 6 && state === STATE_PLAY) {
                     failGame();
                 }
             }
