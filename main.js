@@ -8,6 +8,10 @@ window.onresize = () => {
 }
 
 window.onload = () => {
+    if (window.innerWidth < 1200) {
+        alert('This does not work on smaller devices! Sorry! Maybe I will fix it one day..');
+        return;
+    }
     setCanvasDimensions();
 
     snake = new Snake();
